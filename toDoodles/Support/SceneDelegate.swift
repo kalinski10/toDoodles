@@ -13,10 +13,46 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
+        window?.rootViewController = createTabBar()
+        window?.makeKeyAndVisible()
+        configureNC()
+    }
+    
+    func historyNC() -> UINavigationController {
+        let historyVC = HistoryVC()
+        historyVC.title = "History"
+        historyVC.tabBarItem = UITabBarItem(title: "History", image: UIImage(systemName: "clock"), tag: 0)
+        return UINavigationController(rootViewController: historyVC)
+    }
+    
+    func todayNC() -> UINavigationController {
+        let todayVC = TodayVC()
+        todayVC.title = "Today"
+        todayVC.tabBarItem = UITabBarItem(title: "Today", image: UIImage(systemName: "list.bullet"), tag: 1)
+        return UINavigationController(rootViewController: todayVC)
+    }
+    
+    func progressNC() -> UINavigationController {
+        let progressVC = ProgressVC()
+        progressVC.title = "Progress"
+        progressVC.tabBarItem = UITabBarItem(title: "Progress", image: UIImage(systemName: "chart.bar.xaxis"), tag: 2)
+        return UINavigationController(rootViewController: progressVC)
+    }
+    
+    func configureNC() {
+        UINavigationBar.appearance().tintColor = .systemIndigo
+    }
+    
+    func createTabBar() -> UITabBarController {
+       let tabbar = UITabBarController()
+        UITabBar.appearance().tintColor = .systemIndigo
+        tabbar.viewControllers = [historyNC(), todayNC(), progressNC()]
+        tabbar.selectedIndex = 1 // this selects which item you want to be presented first
+        return tabbar
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
