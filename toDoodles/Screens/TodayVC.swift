@@ -21,6 +21,7 @@ class TodayVC: UIViewController {
     let containerView           = UIView()
     
     var tasks:                  [Task]?
+    var allTasks:               [Task]?
     
     var collectionView:         UICollectionView!
     var dataSource:             UICollectionViewDiffableDataSource<Section, Task>!
@@ -54,12 +55,14 @@ class TodayVC: UIViewController {
     
 // MARK: - Private Functions
     
+    
     func fetchTasks() {
         DataControllerManager.shared.fetchTasks(completed: { [weak self] result in
             guard let self = self else { return }
             switch result{
             
             case .success(let tasks):
+                self.allTasks = tasks
                 self.tasks = tasks.filter { $0.completion == .pending }
                 if self.tasks?.count == 0 {
                     configureContainerViewFromMainThread()
@@ -129,6 +132,7 @@ class TodayVC: UIViewController {
         
         DataControllerManager.shared.saveTasks()
         collectionView.reloadData()
+        manageLocalNotifications(totalTasks: tasks.count, completedTasks: allTasks!.count)
     }
     
 // MARK: - Layout configurations

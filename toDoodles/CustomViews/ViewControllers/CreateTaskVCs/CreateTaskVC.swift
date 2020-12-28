@@ -78,10 +78,8 @@ class CreateTaskVC: UIViewController {
         newTask.createdAt       = Date()
     }
     
-    
-    // we have a global var for that now
+
     func saveTask() {
-        
         do { try self.context.save() }
         catch { print("couldnt save tasksss") }
     }

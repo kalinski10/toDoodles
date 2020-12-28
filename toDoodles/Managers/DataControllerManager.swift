@@ -10,8 +10,8 @@ import CoreData
 
 class DataControllerManager {
 
-    static let shared = DataControllerManager()
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    static let shared   = DataControllerManager()
+    let context         = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     private init() {}
     
@@ -19,22 +19,27 @@ class DataControllerManager {
     func fetchTasks(completed: (Result<[Task], TDError>) -> Void) {
         do {
             var tasks: [Task] = try context.fetch(Task.fetchRequest())
-            if tasks.count == 0 {
+            
+            if tasks.isEmpty {
                 completed(.failure(.weHaveAnError))
                 return
             }
+            
             tasks.sort { $0.createdAt! > $1.createdAt! }
             completed(.success(tasks))
         }
-        catch { completed(.failure(.weHaveAnError)) }
+        catch {
+            completed(.failure(.weHaveAnError))
+            print("something went wronrg while trying to retrieve your tasks.")
+        }
     }
     
     
     func fetchSubTasks(mainTask: Task, completed: (Result<[SubTask], TDError>) -> Void) {
         
         do {
-            let tasks: [SubTask] = try context.fetch(SubTask.fetchRequest())
-            let filteredTasks = tasks.filter { $0.mainTask == mainTask}
+            let tasks: [SubTask]    = try context.fetch(SubTask.fetchRequest())
+            let filteredTasks       = tasks.filter { $0.mainTask == mainTask}
             if filteredTasks.isEmpty {
                 completed(.failure(.weHaveAnError))
                 return
@@ -43,12 +48,15 @@ class DataControllerManager {
         }
         catch {
             completed(.failure(.weHaveAnError))
+            print("something went wronrg while trying to retrieve your tasks.")
         }
     }
 
 
     func saveTasks() {
-        do { try context.save() } catch { print("couldnt save tasks") }
+        do { try context.save() }
+        catch { print("something went wrong while tring to save your changes. 😔") }
     }
+    
     
 }

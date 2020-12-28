@@ -236,9 +236,7 @@
 		4CBC5C022575131000C170F6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4C6348712573C6C90041A2B8 /* CreateTaskVC.swift */,
-				4C9AA1352587D24A00B788DA /* CreateMainTaskVC.swift */,
-				4C9AA1382587D26500B788DA /* CreateSubTaskVC.swift */,
+				4CDF79B92598A76E007B3941 /* CreateTaskVCs */,
 				4CCB4E2F258B5D220051F1F7 /* TDAlertVC.swift */,
 				4CCEB0772594D8050050C89D /* TDDeletionNotificationViewController.swift */,
 			);
@@ -288,6 +286,16 @@
 				4CCB4E5D258E589D0051F1F7 /* BadgeSupplementaryView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4CDF79B92598A76E007B3941 /* CreateTaskVCs */ = {
+			isa = PBXGroup;
+			children = (
+				4C6348712573C6C90041A2B8 /* CreateTaskVC.swift */,
+				4C9AA1352587D24A00B788DA /* CreateMainTaskVC.swift */,
+				4C9AA1382587D26500B788DA /* CreateSubTaskVC.swift */,
+			);
+			path = CreateTaskVCs;
 			sourceTree = "<group>";
 		};
 		63D1DA8648AFAB697B712CF5 /* Pods */ = {
