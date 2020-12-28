@@ -34,7 +34,7 @@ class TDemptyStateView: UIView {
         backgroundColor     = .systemBackground
         
         
-        imageView.image     = UIImage(systemName: "scribble.variable")
+        imageView.image     = Constants.SystemImage.scribbleVariable
         imageView.tintColor = .systemGray2
         imageView.translatesAutoresizingMaskIntoConstraints = false
         

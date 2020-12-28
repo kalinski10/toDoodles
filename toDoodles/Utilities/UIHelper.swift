@@ -27,7 +27,7 @@ enum UIHelper {
         let badgeAnchor = NSCollectionLayoutAnchor(edges: [.top, .trailing], fractionalOffset: CGPoint(x: 0.3, y: -0.3))
         let badgeSize   = NSCollectionLayoutSize(widthDimension: .absolute(20), heightDimension: .absolute(20))
         let badge       = NSCollectionLayoutSupplementaryItem(layoutSize: badgeSize,
-                                                              elementKind: "badge",
+                                                              elementKind: Constants.ElementKind.badge,
                                                               containerAnchor: badgeAnchor)
         
         let itemSize                = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))

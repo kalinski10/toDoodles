@@ -31,7 +31,7 @@ class CreateSubTaskVC: CreateTaskVC {
     
     
     func configureVC() {
-        titleLabel.text = "Create sub task"
+        titleLabel.text = Constants.Strings.Title.createSubTask
     }
     
 }

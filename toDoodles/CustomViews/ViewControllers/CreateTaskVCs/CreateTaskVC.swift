@@ -15,7 +15,7 @@ class CreateTaskVC: UIViewController {
     var titleLabel          = TDTitleLabel(titleColor: .label)
     var taskContainer       = UIView()
     var textField           = TDTextField()
-    var createButton        = TDButton(title: "Add Task")
+    var createButton        = TDButton(title: Constants.Strings.ButtonText.addTask)
     
     var isKeyboardPresent   = false
     
@@ -81,7 +81,7 @@ class CreateTaskVC: UIViewController {
 
     func saveTask() {
         do { try self.context.save() }
-        catch { print("couldnt save tasksss") }
+        catch { print(TDError.savingError.rawValue) }
     }
     
 // MARK: - UI Configurations

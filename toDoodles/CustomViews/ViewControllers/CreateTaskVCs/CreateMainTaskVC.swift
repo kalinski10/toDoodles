@@ -33,7 +33,7 @@ class CreateMainTaskVC: CreateTaskVC {
     
     
     func configureVC() {
-        titleLabel.text = "Create main task"
+        titleLabel.text = Constants.Strings.Title.createMainTask
     }
     
 }

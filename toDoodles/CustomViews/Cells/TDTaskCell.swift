@@ -14,7 +14,7 @@ protocol TaskCellDelegate: AnyObject {
 
 class TDTaskCell: UICollectionViewCell {
     
-    static let reuseID          = "taskCellID"
+    static let reuseID          = Constants.ReuseIdentifier.taskCellReuseID
 
     let taskDescription         = UILabel()
     let accessoryTypeButton     = UIButton()
@@ -57,7 +57,7 @@ class TDTaskCell: UICollectionViewCell {
     func configureButton() {
         addSubview(accessoryTypeButton)
         
-        accessoryTypeButton.setImage(UIImage(systemName: "chevron.forward.square.fill"), for: .normal)
+        accessoryTypeButton.setImage(Constants.SystemImage.chevronFill, for: .normal)
         accessoryTypeButton.tintColor = .systemIndigo
         accessoryTypeButton.translatesAutoresizingMaskIntoConstraints = false
         accessoryTypeButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)

@@ -10,7 +10,7 @@ import UIKit
 class LocalNotificationView: UIView {
 
     let label = TDBodyLabel()
-    let image = UIImageView(image: UIImage(systemName: "arrow.uturn.backward"))
+    let image = UIImageView(image: Constants.SystemImage.arrowUturnBackward)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,7 +36,7 @@ class LocalNotificationView: UIView {
         
         image.translatesAutoresizingMaskIntoConstraints = false
         image.tintColor = .secondaryLabel
-        label.text      = "Undo"
+        label.text      = Constants.Strings.Label.undo
         label.textColor = .secondaryLabel
         
         

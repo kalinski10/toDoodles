@@ -21,7 +21,7 @@ class DataControllerManager {
             var tasks: [Task] = try context.fetch(Task.fetchRequest())
             
             if tasks.isEmpty {
-                completed(.failure(.weHaveAnError))
+                completed(.failure(.noTasks))
                 return
             }
             
@@ -29,8 +29,7 @@ class DataControllerManager {
             completed(.success(tasks))
         }
         catch {
-            completed(.failure(.weHaveAnError))
-            print("something went wronrg while trying to retrieve your tasks.")
+            completed(.failure(.retrieveError))
         }
     }
     
@@ -41,21 +40,20 @@ class DataControllerManager {
             let tasks: [SubTask]    = try context.fetch(SubTask.fetchRequest())
             let filteredTasks       = tasks.filter { $0.mainTask == mainTask}
             if filteredTasks.isEmpty {
-                completed(.failure(.weHaveAnError))
+                completed(.failure(.noTasks))
                 return
             }
             completed(.success(filteredTasks))
         }
         catch {
-            completed(.failure(.weHaveAnError))
-            print("something went wronrg while trying to retrieve your tasks.")
+            completed(.failure(.retrieveError))
         }
     }
 
 
     func saveTasks() {
         do { try context.save() }
-        catch { print("something went wrong while tring to save your changes. 😔") }
+        catch { print(TDError.savingError.rawValue) }
     }
     
     

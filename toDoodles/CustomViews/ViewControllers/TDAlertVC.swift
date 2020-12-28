@@ -12,7 +12,7 @@ class TDAlertVC: UIViewController {
     let containerView       = TDAlertContainerView()
     let alertTitle          = TDTitleLabel(titleColor: .label)
     let bodyLabel           = TDBodyLabel()
-    let button              = TDButton(title: "Ok")
+    let button              = TDButton(title: Constants.Strings.ButtonText.ok)
     
     let padding: CGFloat    = 20
     

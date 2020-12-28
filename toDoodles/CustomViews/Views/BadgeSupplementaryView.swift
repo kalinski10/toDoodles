@@ -9,7 +9,7 @@ import UIKit
 
 class BadgeSupplementaryView: UICollectionReusableView {
 
-    static let reuseIdentifier = "badge-reuse-identifier"
+    static let reuseIdentifier = Constants.ReuseIdentifier.badgeReuseID
     let label = UILabel()
 
     override init(frame: CGRect) {

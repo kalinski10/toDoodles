@@ -15,8 +15,6 @@ class TodayVC: UIViewController {
     
     enum Section { case main }
     
-    static let badgeElementKind = "badge-element"
-    
     let addTaskButton           = TDroundButton(height: CGFloat(50))
     let containerView           = UIView()
     
@@ -162,7 +160,7 @@ class TodayVC: UIViewController {
         DispatchQueue.main.async {
             self.view.addSubview(self.containerView)
             self.containerView.frame = self.view.bounds
-            self.showEmptyStateView(with: "You don't have any tasks set out for today, add some right now 👍", in: self.containerView)
+            self.showEmptyStateView(with: Constants.Strings.Message.noTasksForToday, in: self.containerView)
             self.view.bringSubviewToFront(self.addTaskButton)
         }
     }

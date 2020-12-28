@@ -13,7 +13,7 @@ import CoreData
 extension SubTask {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<SubTask> {
-        return NSFetchRequest<SubTask>(entityName: "SubTask")
+        return NSFetchRequest<SubTask>(entityName: Constants.EntityName.subTask)
     }
 
     @NSManaged public var body: String?

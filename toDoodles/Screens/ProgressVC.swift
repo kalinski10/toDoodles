@@ -58,8 +58,8 @@ class ProgressVC: UIViewController {
     
     
     func setChartValues() {
-        compDataEntry                   = PieChartDataEntry(value: Double(completedTasks.count), label: "Completed")
-        pendingDataEntry                = PieChartDataEntry(value: Double(pendingMainTasks.count), label: "Pending")
+        compDataEntry                   = PieChartDataEntry(value: Double(completedTasks.count), label: Constants.Strings.Label.completed)
+        pendingDataEntry                = PieChartDataEntry(value: Double(pendingMainTasks.count), label: Constants.Strings.Label.pending)
         numberOfTaskDataEntries         = [compDataEntry, pendingDataEntry]
         updateChartData()
     }
@@ -80,14 +80,14 @@ class ProgressVC: UIViewController {
         DispatchQueue.main.async {
             self.emptyContainerView.frame = self.view.bounds
             self.view.addSubview(self.emptyContainerView)
-            self.showEmptyStateView(with: "You don't have any tasks set out for today, add some right now 👍", in: self.emptyContainerView)
+            self.showEmptyStateView(with: Constants.Strings.Message.noTasksForToday, in: self.emptyContainerView)
         }
     }
     
     
     func configurePieChart() {
         view.addSubviews(views: pieChart)
-        pieChart.chartDescription?.text = "Completed vs Pending tasks"
+        pieChart.chartDescription?.text = Constants.Strings.Label.pieChartDescription
         
         NSLayoutConstraint.activate([
             pieChart.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),

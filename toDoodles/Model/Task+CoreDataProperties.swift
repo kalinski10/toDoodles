@@ -13,7 +13,7 @@ import CoreData
 extension Task {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Task> {
-        return NSFetchRequest<Task>(entityName: "Task")
+        return NSFetchRequest<Task>(entityName: Constants.EntityName.task)
     }
 
     @NSManaged public var completionEnum: Int64

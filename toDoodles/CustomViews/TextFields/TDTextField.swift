@@ -27,7 +27,7 @@ class TDTextField: UITextField {
         adjustsFontSizeToFitWidth   = true
         
         textAlignment               = .left
-        placeholder                 = "Start writing your task here!"
+        placeholder                 = Constants.Strings.Message.placeholder
 
         returnKeyType               = .go
     }

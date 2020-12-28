@@ -63,7 +63,7 @@ class SubTaskScreen: TDDeletionNotificationViewController {
             present(createSubTaskVC, animated: true)
             return
         }
-        presentTDAlerVCOnMainThread(title: "Oops", body: "Looks like you've reached the most amount of sub tasks you can have")
+        presentTDAlerVCOnMainThread(title: Constants.Strings.Title.oops, body: Constants.Strings.Message.maxSubTasks)
     }
     
     
@@ -87,7 +87,7 @@ class SubTaskScreen: TDDeletionNotificationViewController {
                 
             case .failure(_):
                 DispatchQueue.main.async {
-                    self.showEmptyStateView(with: "Add up to 3 sub tasks to help you complete you main task 👍", in: self.containerViewforEmptyState)
+                    self.showEmptyStateView(with: Constants.Strings.Message.addSubTasks, in: self.containerViewforEmptyState)
                 }
             }
         }
@@ -108,7 +108,7 @@ class SubTaskScreen: TDDeletionNotificationViewController {
     func taskCompletionCheck() {
         let tasks = filteredTasks.filter { $0.completion == .completed }
         if tasks.count == filteredTasks.count && filteredTasks.count != 0 {
-            presentTDAlerVCOnMainThread(title: "Congratulations", body: "You have completed all of your sub tasks. We will mark your main task as complete and you can find it in History.")
+            presentTDAlerVCOnMainThread(title: Constants.Strings.Title.congrats, body: Constants.Strings.Message.allTasksCompleted)
             mainTask.completion = .completed
             DataControllerManager.shared.saveTasks()
         }
@@ -127,7 +127,7 @@ class SubTaskScreen: TDDeletionNotificationViewController {
     
     // i could easily refactor these into another file
     func configureItemOne() {
-        barButtonItemOne.image            = UIImage(systemName: "rectangle.and.pencil.and.ellipsis")
+        barButtonItemOne.image            = Constants.SystemImage.edit
         barButtonItemOne.tintColor        = .systemIndigo
         barButtonItemOne.style            = .plain
         barButtonItemOne.target           = self
@@ -136,7 +136,7 @@ class SubTaskScreen: TDDeletionNotificationViewController {
     
     
     func ConfigureBackItem() {
-        backBarButtonItem.image           = UIImage(systemName: "chevron.backward")
+        backBarButtonItem.image           = Constants.SystemImage.chevronBackward
         backBarButtonItem.tintColor       = .systemIndigo
         backBarButtonItem.style           = .plain
         backBarButtonItem.target          = self
@@ -186,7 +186,7 @@ extension SubTaskScreen: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let action  = UIContextualAction(style: .destructive, title: "Delete") { [weak self] action, view, completionHandler in
+        let action  = UIContextualAction(style: .destructive, title: Constants.Strings.Title.delete) { [weak self] action, view, completionHandler in
             guard let self = self else { return }
             
             let taskToRemove            = self.filteredTasks[indexPath.row]
@@ -210,7 +210,7 @@ extension SubTaskScreen: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Add up to 3 sub tasks 🙂"
+        return Constants.Strings.Header.addThreeTasks
     }
      
 }

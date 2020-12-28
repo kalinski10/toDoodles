@@ -13,7 +13,7 @@ protocol SubTaskButtonPressedDelegate: AnyObject {
 
 class SubTaskCell: UITableViewCell {
 
-    static let reuseID = "subTaskCellID"
+    static let reuseID = Constants.ReuseIdentifier.subTaskCellReuseID
     
     let body    = UILabel()
     let button  = UIButton()
@@ -58,9 +58,9 @@ class SubTaskCell: UITableViewCell {
         
         switch completion {
         case .completed:
-            button.setImage(UIImage(systemName: "largecircle.fill.circle"), for: .normal)
+            button.setImage(Constants.SystemImage.fillCircle, for: .normal)
         case .pending:
-            button.setImage(UIImage(systemName: "circle"), for: .normal)
+            button.setImage(Constants.SystemImage.circle, for: .normal)
         }
     }
     
@@ -68,7 +68,7 @@ class SubTaskCell: UITableViewCell {
     func configureButton() {
         addSubview(button)
 
-        button.setImage(UIImage(systemName: "circle"), for: .normal)
+        button.setImage(Constants.SystemImage.circle, for: .normal)
         button.tintColor = .systemIndigo
         
         isUserInteractionEnabled = true

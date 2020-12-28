@@ -30,7 +30,7 @@ class TDroundButton: UIButton {
     func configure() {
         translatesAutoresizingMaskIntoConstraints              = false
         widthAnchor.constraint(equalTo: heightAnchor).isActive = true
-        setImage(UIImage(systemName: "plus")?.withTintColor(.white, renderingMode: .alwaysOriginal), for: .normal)
+        setImage(Constants.SystemImage.plus, for: .normal)
         
         backgroundColor     = .systemIndigo
     }
