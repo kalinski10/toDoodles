@@ -42,6 +42,7 @@ class HistoryVC: TDDeletionNotificationViewController {
         
         hideNotificationOnMainThread()
     }
+    
 // MARK: - Private functions
     
     func updateData(with tasks: [Task]) {
@@ -91,7 +92,7 @@ class HistoryVC: TDDeletionNotificationViewController {
     
     func configureTrailingSwipeAction(indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let deleteAction = UIContextualAction(style: .destructive, title: "delete") { [weak self] action, view, completionHandler in
+        let deleteAction = UIContextualAction(style: .destructive, title: Constants.Strings.Title.delete) { [weak self] action, view, completionHandler in
             guard let self = self else { return }
             
             let taskToRemove            = self.completedTasks[indexPath.row]
@@ -110,7 +111,7 @@ class HistoryVC: TDDeletionNotificationViewController {
             self.updateListView()
         }
         
-        let incompleteAction = UIContextualAction(style: .normal, title: "move to incomplete") { [weak self] action, view, completionHandler in
+        let incompleteAction = UIContextualAction(style: .normal, title: Constants.Strings.Title.moveToIncomplete) { [weak self] action, view, completionHandler in
             guard let self   = self else { return }
             
             let task         = self.completedTasks[indexPath.row]
@@ -129,13 +130,14 @@ class HistoryVC: TDDeletionNotificationViewController {
         DispatchQueue.main.async {
             self.containerView.frame = self.view.bounds
             self.view.addSubview(self.containerView)
-            self.showEmptyStateView(with: "You havent completed any tasks today, set some right now and get em done", in: self.containerView)
+            self.showEmptyStateView(with: Constants.Strings.Message.noCompletedTasks, in: self.containerView)
         }
     }
     
     
     func configureCollectionView() {
         collectionView      = UICollectionView(frame: view.bounds, collectionViewLayout: configureCollectionListCompositionalLayout())
+        collectionView.allowsSelection = false
         view.addSubviews(views: collectionView)
         
         let reg = UICollectionView.CellRegistration<UICollectionViewListCell, Task> {
@@ -152,13 +154,4 @@ class HistoryVC: TDDeletionNotificationViewController {
     }
     
     
-}
-
-
-// TODO: Not sure i need this
-extension HistoryVC: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, canEditItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
 }

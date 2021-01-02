@@ -58,7 +58,7 @@ class TDAlertVC: UIViewController {
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
     
-    // MARK: - Layout configuretaions
+// MARK: - Layout configuretaions
     
     func configureLayout() {
         NSLayoutConstraint.activate([

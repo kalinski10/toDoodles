@@ -17,6 +17,7 @@ enum Constants {
             static let oops                 = "Oops"
             static let congrats             = "Congratulations"
             static let delete               = "Delete"
+            static let moveToIncomplete     = "Move to incomplete"
         }
         
         enum Header {
@@ -29,6 +30,7 @@ enum Constants {
             static let maxSubTasks          = "Looks like you've reached the most amount of sub tasks you can have"
             static let addSubTasks          = "Add up to 3 sub tasks to help you complete you main task 👍"
             static let allTasksCompleted    = "You have completed all of your sub tasks. We will mark your main task as complete and you can find it in History."
+            static let noCompletedTasks     = "You havent completed any tasks today, set some right now and get em done"
         }
         
         enum ButtonText {

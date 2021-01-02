@@ -71,8 +71,8 @@ class CreateTaskVC: UIViewController {
 // MARK: - Private functions
     
     func createNewTask(taskString: String) {
-        //create new task
-        let newTask             = Task(context: self.context) // this is how we create new task and then add properties
+        // this is how we create new task and then add properties
+        let newTask             = Task(context: self.context)
         newTask.taskDescription = taskString
         newTask.completion      = .pending
         newTask.createdAt       = Date()
