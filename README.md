@@ -34,6 +34,7 @@ Technologies and techniques I learned and used in this course:
   
   some screenShots of the app:
   
+  
 ![Simulator Screen Shot - iPhone 12 - 2021-01-18 at 21 16 15](https://user-images.githubusercontent.com/52208012/104964111-b71c7880-59d3-11eb-8c05-8b7882650cf8.png)  
 ![Simulator Screen Shot - iPhone 12 - 2021-01-18 at 21 15 49](https://user-images.githubusercontent.com/52208012/104964109-b683e200-59d3-11eb-8125-fc8e3e490013.png)
 ![Simulator Screen Shot - iPhone 12 - 2021-01-18 at 21 16 43](https://user-images.githubusercontent.com/52208012/104964112-b7b50f00-59d3-11eb-976b-2a54530a9eb1.png)
