@@ -1,8 +1,8 @@
 //
 //  SubTask+CoreDataProperties.swift
-//  toDoodles
+//  
 //
-//  Created by Kalin Balabanov on 18/12/2020.
+//  Created by Kalin Balabanov on 28/01/2021.
 //
 //
 
@@ -13,15 +13,11 @@ import CoreData
 extension SubTask {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<SubTask> {
-        return NSFetchRequest<SubTask>(entityName: Constants.EntityName.subTask)
+        return NSFetchRequest<SubTask>(entityName: "SubTask")
     }
 
     @NSManaged public var body: String?
     @NSManaged public var completionEnum: Int64
     @NSManaged public var mainTask: Task?
-
-}
-
-extension SubTask : Identifiable {
 
 }

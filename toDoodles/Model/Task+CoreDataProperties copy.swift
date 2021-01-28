@@ -1,8 +1,8 @@
 //
 //  Task+CoreDataProperties.swift
-//  toDoodles
+//  
 //
-//  Created by Kalin Balabanov on 18/12/2020.
+//  Created by Kalin Balabanov on 28/01/2021.
 //
 //
 
@@ -13,12 +13,12 @@ import CoreData
 extension Task {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Task> {
-        return NSFetchRequest<Task>(entityName: Constants.EntityName.task)
+        return NSFetchRequest<Task>(entityName: "Task")
     }
 
     @NSManaged public var completionEnum: Int64
-    @NSManaged public var taskDescription: String?
     @NSManaged public var createdAt: Date?
+    @NSManaged public var taskDescription: String?
     @NSManaged public var subTask: NSSet?
 
 }
@@ -37,9 +37,5 @@ extension Task {
 
     @objc(removeSubTask:)
     @NSManaged public func removeFromSubTask(_ values: NSSet)
-
-}
-
-extension Task : Identifiable {
 
 }

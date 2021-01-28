@@ -10,6 +10,10 @@
 		4152F08E265F91677709003C /* Pods_toDoodles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7B5F1A356B97D6326FA94B /* Pods_toDoodles.framework */; };
 		4C2C593B25921F21002AA4B3 /* TDPieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C593A25921F21002AA4B3 /* TDPieChartView.swift */; };
 		4C3373E3259A31DF004472DD /* Constants+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3373E2259A31DF004472DD /* Constants+Enum.swift */; };
+		4C57CA4A25C2F45800192113 /* Task+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C57CA4625C2F45800192113 /* Task+CoreDataClass copy.swift */; };
+		4C57CA4B25C2F45800192113 /* SubTask+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C57CA4725C2F45800192113 /* SubTask+CoreDataProperties copy.swift */; };
+		4C57CA4C25C2F45800192113 /* Task+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C57CA4825C2F45800192113 /* Task+CoreDataProperties copy.swift */; };
+		4C57CA4D25C2F45800192113 /* SubTask+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C57CA4925C2F45800192113 /* SubTask+CoreDataClass copy.swift */; };
 		4C63483D25727B6A0041A2B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63483C25727B6A0041A2B8 /* AppDelegate.swift */; };
 		4C63483F25727B6A0041A2B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63483E25727B6A0041A2B8 /* SceneDelegate.swift */; };
 		4C63484625727B6C0041A2B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C63484525727B6C0041A2B8 /* Assets.xcassets */; };
@@ -40,10 +44,6 @@
 		4CCB4E33258B7ACE0051F1F7 /* TDAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4E32258B7ACE0051F1F7 /* TDAlertContainerView.swift */; };
 		4CCB4E36258B7EF90051F1F7 /* TDBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4E35258B7EF90051F1F7 /* TDBodyLabel.swift */; };
 		4CCB4E39258B81F70051F1F7 /* LocalNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4E38258B81F70051F1F7 /* LocalNotificationView.swift */; };
-		4CCB4E4E258D19B40051F1F7 /* SubTask+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4E4A258D19B40051F1F7 /* SubTask+CoreDataClass.swift */; };
-		4CCB4E4F258D19B40051F1F7 /* SubTask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4E4B258D19B40051F1F7 /* SubTask+CoreDataProperties.swift */; };
-		4CCB4E50258D19B40051F1F7 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4E4C258D19B40051F1F7 /* Task+CoreDataClass.swift */; };
-		4CCB4E51258D19B40051F1F7 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4E4D258D19B40051F1F7 /* Task+CoreDataProperties.swift */; };
 		4CCB4E57258D1ABF0051F1F7 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4E56258D1ABF0051F1F7 /* Date+Ext.swift */; };
 		4CCB4E5E258E589D0051F1F7 /* BadgeSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB4E5D258E589D0051F1F7 /* BadgeSupplementaryView.swift */; };
 		4CCEB0782594D8050050C89D /* TDDeletionNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCEB0772594D8050050C89D /* TDDeletionNotificationViewController.swift */; };
@@ -54,6 +54,10 @@
 		3F37EF9A16348FF3424F0E5C /* Pods-toDoodles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-toDoodles.release.xcconfig"; path = "Target Support Files/Pods-toDoodles/Pods-toDoodles.release.xcconfig"; sourceTree = "<group>"; };
 		4C2C593A25921F21002AA4B3 /* TDPieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDPieChartView.swift; sourceTree = "<group>"; };
 		4C3373E2259A31DF004472DD /* Constants+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Enum.swift"; sourceTree = "<group>"; };
+		4C57CA4625C2F45800192113 /* Task+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass copy.swift"; sourceTree = "<group>"; };
+		4C57CA4725C2F45800192113 /* SubTask+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SubTask+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
+		4C57CA4825C2F45800192113 /* Task+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
+		4C57CA4925C2F45800192113 /* SubTask+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SubTask+CoreDataClass copy.swift"; sourceTree = "<group>"; };
 		4C63483925727B6A0041A2B8 /* toDoodles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toDoodles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C63483C25727B6A0041A2B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C63483E25727B6A0041A2B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,10 +90,6 @@
 		4CCB4E32258B7ACE0051F1F7 /* TDAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDAlertContainerView.swift; sourceTree = "<group>"; };
 		4CCB4E35258B7EF90051F1F7 /* TDBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDBodyLabel.swift; sourceTree = "<group>"; };
 		4CCB4E38258B81F70051F1F7 /* LocalNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationView.swift; sourceTree = "<group>"; };
-		4CCB4E4A258D19B40051F1F7 /* SubTask+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubTask+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4CCB4E4B258D19B40051F1F7 /* SubTask+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubTask+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4CCB4E4C258D19B40051F1F7 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4CCB4E4D258D19B40051F1F7 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4CCB4E56258D1ABF0051F1F7 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		4CCB4E5D258E589D0051F1F7 /* BadgeSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSupplementaryView.swift; sourceTree = "<group>"; };
 		4CCEB0772594D8050050C89D /* TDDeletionNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDDeletionNotificationViewController.swift; sourceTree = "<group>"; };
@@ -145,8 +145,8 @@
 		4C63483B25727B6A0041A2B8 /* toDoodles */ = {
 			isa = PBXGroup;
 			children = (
-				4C3373E1259A31C5004472DD /* Constants */,
 				4C63484A25727B6C0041A2B8 /* Info.plist */,
+				4C3373E1259A31C5004472DD /* Constants */,
 				4CCB4E1C258A1F220051F1F7 /* Managers */,
 				4C9AA13F25880FB500B788DA /* Utilities */,
 				4CA0A58A2584F82200191DAE /* Extensions */,
@@ -198,10 +198,10 @@
 		4C63485625727BD10041A2B8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4CCB4E4A258D19B40051F1F7 /* SubTask+CoreDataClass.swift */,
-				4CCB4E4B258D19B40051F1F7 /* SubTask+CoreDataProperties.swift */,
-				4CCB4E4C258D19B40051F1F7 /* Task+CoreDataClass.swift */,
-				4CCB4E4D258D19B40051F1F7 /* Task+CoreDataProperties.swift */,
+				4C57CA4925C2F45800192113 /* SubTask+CoreDataClass copy.swift */,
+				4C57CA4725C2F45800192113 /* SubTask+CoreDataProperties copy.swift */,
+				4C57CA4825C2F45800192113 /* Task+CoreDataProperties copy.swift */,
+				4C57CA4625C2F45800192113 /* Task+CoreDataClass copy.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -456,17 +456,16 @@
 				4C9AA1212587736400B788DA /* SubTaskScreen.swift in Sources */,
 				4CBC5C062575139B00C170F6 /* TDTitleLabel.swift in Sources */,
 				4C9AA1242587790300B788DA /* SubTaskCell.swift in Sources */,
-				4CCB4E50258D19B40051F1F7 /* Task+CoreDataClass.swift in Sources */,
+				4C57CA4D25C2F45800192113 /* SubTask+CoreDataClass copy.swift in Sources */,
 				4C6348722573C6C90041A2B8 /* CreateTaskVC.swift in Sources */,
+				4C57CA4A25C2F45800192113 /* Task+CoreDataClass copy.swift in Sources */,
 				4CCB4E25258A285D0051F1F7 /* TDError.swift in Sources */,
-				4CCB4E4F258D19B40051F1F7 /* SubTask+CoreDataProperties.swift in Sources */,
 				4CCB4E30258B5D220051F1F7 /* TDAlertVC.swift in Sources */,
 				4C63485A2572821D0041A2B8 /* HistoryVC.swift in Sources */,
-				4CCB4E51258D19B40051F1F7 /* Task+CoreDataProperties.swift in Sources */,
 				4C63486525728B150041A2B8 /* TDroundButton.swift in Sources */,
-				4CCB4E4E258D19B40051F1F7 /* SubTask+CoreDataClass.swift in Sources */,
 				4C2C593B25921F21002AA4B3 /* TDPieChartView.swift in Sources */,
 				4CBC5C0B257514F600C170F6 /* TDMinusBar.swift in Sources */,
+				4C57CA4B25C2F45800192113 /* SubTask+CoreDataProperties copy.swift in Sources */,
 				4C63486A2572AB2D0041A2B8 /* TDTaskCell.swift in Sources */,
 				4CCB4E33258B7ACE0051F1F7 /* TDAlertContainerView.swift in Sources */,
 				4CCB4E2D258A3DF00051F1F7 /* ViewController+Ext.swift in Sources */,
@@ -475,6 +474,7 @@
 				4C63483D25727B6A0041A2B8 /* AppDelegate.swift in Sources */,
 				4C63483F25727B6A0041A2B8 /* SceneDelegate.swift in Sources */,
 				4C9AA14225880FE800B788DA /* UIHelper.swift in Sources */,
+				4C57CA4C25C2F45800192113 /* Task+CoreDataProperties copy.swift in Sources */,
 				4CCB4E36258B7EF90051F1F7 /* TDBodyLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
